@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable no-underscore-dangle */
+/* eslint linebreak-style: ["error", "windows"] */
 
 /**
  * Класс, объекты которого описывают параметры гамбургера.
@@ -188,8 +189,8 @@ const largeGamburger = new Hamburger(
 );
 
 largeGamburger.addTopping(Hamburger.TOPPINGSAUCE);
-console.log('Calories: ', largeGamburger.calories);
-console.log('Price: ', largeGamburger.price);
+console.log('Calories: ', largeGamburger.calories); // 120
+console.log('Price: ', largeGamburger.price); // 100
 console.log('Hamburger has %d toppings', largeGamburger.toppings.length); // 1
 largeGamburger.removeTopping(Hamburger.TOPPINGSPICE);// Нет такого топпинга, ничего не удаляется
 console.log('Hamburger has %d toppings', largeGamburger.toppings.length); // 1
@@ -197,9 +198,9 @@ largeGamburger.removeTopping(Hamburger.TOPPINGSAUCE);// А такой есть
 console.log('Hamburger has %d toppings', largeGamburger.toppings.length); // 0
 largeGamburger.addTopping(Hamburger.TOPPINGSPICE);// Добавляем другой топпинг
 console.log('Hamburger has %d toppings', largeGamburger.toppings.length); // 1
-console.log('Calories: ', largeGamburger.calories);
-console.log('Price: ', largeGamburger.price);
+console.log('Calories: ', largeGamburger.calories); // 115
+console.log('Price: ', largeGamburger.price); // 95
 largeGamburger.addTopping(Hamburger.TOPPINGSAUCE);
 console.log('Hamburger has %d toppings', largeGamburger.toppings.length); // 2
-console.log('Calories: ', largeGamburger.calories);
-console.log('Price: ', largeGamburger.price);
+console.log('Calories: ', largeGamburger.calories); // 120
+console.log('Price: ', largeGamburger.price); // 110
