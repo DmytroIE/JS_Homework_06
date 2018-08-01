@@ -178,3 +178,28 @@ hamburger.removeTopping(Hamburger.TOPPINGSPICE);
 
 // Смотрим сколько добавок
 console.log('Hamburger has %d toppings', hamburger.toppings.length); // 1
+
+// Дополнительные проверки
+
+// Большой гамбургер с мясом
+const largeGamburger = new Hamburger(
+  Hamburger.SIZELARGE,
+  Hamburger.STUFFINGMEAT,
+);
+
+largeGamburger.addTopping(Hamburger.TOPPINGSAUCE);
+console.log('Calories: ', largeGamburger.calories);
+console.log('Price: ', largeGamburger.price);
+console.log('Hamburger has %d toppings', largeGamburger.toppings.length); // 1
+largeGamburger.removeTopping(Hamburger.TOPPINGSPICE);// Нет такого топпинга, ничего не удаляется
+console.log('Hamburger has %d toppings', largeGamburger.toppings.length); // 1
+largeGamburger.removeTopping(Hamburger.TOPPINGSAUCE);// А такой есть
+console.log('Hamburger has %d toppings', largeGamburger.toppings.length); // 0
+largeGamburger.addTopping(Hamburger.TOPPINGSPICE);// Добавляем другой топпинг
+console.log('Hamburger has %d toppings', largeGamburger.toppings.length); // 1
+console.log('Calories: ', largeGamburger.calories);
+console.log('Price: ', largeGamburger.price);
+largeGamburger.addTopping(Hamburger.TOPPINGSAUCE);
+console.log('Hamburger has %d toppings', largeGamburger.toppings.length); // 2
+console.log('Calories: ', largeGamburger.calories);
+console.log('Price: ', largeGamburger.price);
