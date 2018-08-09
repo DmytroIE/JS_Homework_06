@@ -76,10 +76,11 @@ class Hamburger {
    * Попробуйте сделать это геттером чтобы можно было обращаться как obj.price и нам вернет сумму.
    */
   get price() {
-    return Hamburger.SIZES[this._size].price
-    + Hamburger.STUFFINGS[this._stuffing].price
-    + Object.entries(Hamburger.TOPPINGS)
+    const hamburgerBreadPrice = Hamburger.SIZES[this._size].price;
+    const hamburgerStuffingPrice = Hamburger.STUFFINGS[this._stuffing].price;
+    const hamburgerToppingPrice = Object.entries(Hamburger.TOPPINGS)
       .reduce((acc, curr) => acc + curr[1].price * Number(this._toppings.includes(curr[0])), 0);
+    return hamburgerBreadPrice + hamburgerStuffingPrice + hamburgerToppingPrice;
   }
 
   /**
@@ -90,10 +91,11 @@ class Hamburger {
    * чтобы можно было обращаться как obj.calories и нам вернет сумму.
    */
   get calories() {
-    return Hamburger.SIZES[this._size].calories
-    + Hamburger.STUFFINGS[this._stuffing].calories
-    + Object.entries(Hamburger.TOPPINGS)
+    const hamburgerBreadCalories = Hamburger.SIZES[this._size].calories;
+    const hamburgerStuffingCalories = Hamburger.STUFFINGS[this._stuffing].calories;
+    const hamburgerToppingCalories = Object.entries(Hamburger.TOPPINGS)
       .reduce((acc, curr) => acc + curr[1].calories * Number(this._toppings.includes(curr[0])), 0);
+    return hamburgerBreadCalories + hamburgerStuffingCalories + hamburgerToppingCalories;
   }
 }
 
